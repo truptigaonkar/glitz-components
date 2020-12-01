@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import BasicGlitz from './components/BasicGlitz';
 
 function App() {
   return (
     <>
-      <h1>Glitz</h1>
+      <BasicGlitz />
     </>
   );
 }
