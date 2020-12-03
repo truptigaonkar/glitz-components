@@ -4,15 +4,15 @@ import { huge, humongous, large, medium, small } from '../Shared/Style';
 import * as style from '../Shared/Style';
 import { black, monochromeLight, neutralDark, positiveLight, secondaryDark, tertiaryDark, white } from '../Shared/Style';
 
-const BasicGlitz = (props:any) => {
+const BasicGlitz = () => {
     const [backgroundColor, setBackgroundColor] = useState(neutralDark);
     function onClickButton() {
         setBackgroundColor(backgroundColor === neutralDark ? positiveLight : neutralDark);
     }
     return (
         <div>
-            <h5>Basic</h5>
-            <p>This example creates two simple components, a wrapper a title, a button with some styles attached to it: margin, padding, border, </p>
+            <h5>margin, padding, border, color</h5>
+            <p>This example creates two simple components, a wrapper a title, a button with some styles attached to it</p>
             <Wrapper style={{ backgroundColor }}>
                 <Title>Hover <styled.Span css={{ color: tertiaryDark }}>me!</styled.Span></Title>
                 <Button onClick={onClickButton}>Change background color</Button>
@@ -59,7 +59,7 @@ const Button = styled.button({
     {
         xy:
         {
-            width: 2,
+            width: 1,
             style: 'solid',
             color: black
         }
