@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@glitz/react';
-import { H2, P, Hr, Ul } from '../Shared/Generic';
+import { H2, P, Hr } from '../Shared/Generic';
 
 const Pseudoelement = () => {
     return (
