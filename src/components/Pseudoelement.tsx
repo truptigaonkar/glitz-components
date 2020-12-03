@@ -1,17 +1,18 @@
 import React from 'react'
 import { styled } from '@glitz/react';
+import { H2, P, Hr, Ul } from '../Shared/Generic';
 
 const Pseudoelement = () => {
     return (
         <styled.Div css={{ display: 'flex', justifyContent:'space-around' }}>
             <styled.Div>
-                <h5>:before, ::after</h5>
-                <p>This example creates svenska flag</p>
+                <H2>:before, ::after</H2><Hr />
+                <P>This example creates svenska flag</P>
                 <Svenskaflag></Svenskaflag>
             </styled.Div>
             <styled.Div>
-                <h5>:hover</h5>
-                <p>This example hovering over svenska flag converts into Denmark flag</p>
+                <H2>:hover</H2><Hr />
+                <P>This example hovering over svenska flag converts into Denmark flag</P>
                 <SvenskaJapanflag></SvenskaJapanflag>
             </styled.Div>
         </styled.Div>

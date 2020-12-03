@@ -33,6 +33,8 @@ export const negativeText = white;
 export const neutral = '#CCC200';
 export const neutralLight = '#F5E900';
 export const neutralDark = '#A39B00';
+export const outlineGrey = '#C6C6C6';
+
 
 type rgbType = [number, number, number];
 

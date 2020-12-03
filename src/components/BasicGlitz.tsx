@@ -3,6 +3,7 @@ import { styled } from '@glitz/react';
 import { huge, humongous, large, medium, small } from '../Shared/Style';
 import * as style from '../Shared/Style';
 import { black, monochromeLight, neutralDark, positiveLight, secondaryDark, tertiaryDark, white } from '../Shared/Style';
+import { H2, P, Hr } from '../Shared/Generic';
 
 const BasicGlitz = () => {
     const [backgroundColor, setBackgroundColor] = useState(neutralDark);
@@ -11,8 +12,8 @@ const BasicGlitz = () => {
     }
     return (
         <div>
-            <h5>margin, padding, border, color</h5>
-            <p>This example creates two simple components, a wrapper a title, a button with some styles attached to it</p>
+            <H2>margin, padding, border, color</H2><Hr />
+            <P>This example creates two simple components, a wrapper a title, a button with some styles attached to it</P>
             <Wrapper style={{ backgroundColor }}>
                 <Title>Hover <styled.Span css={{ color: tertiaryDark }}>me!</styled.Span></Title>
                 <Button onClick={onClickButton}>Change background color</Button>
