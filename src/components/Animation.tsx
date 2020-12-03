@@ -34,4 +34,7 @@ const Box = styled.div({
     animationIterationCount: 'infinite',
     animationDirection: 'alternate',
     animationTimingFunction: 'linear', //animation-timing-function: linear/ease-in-out/steps(5, end)/cubic-bezier(0.1, -0.6, 0.2, 0);
+    margin: {
+       bottom: '250px',
+    }
 });
