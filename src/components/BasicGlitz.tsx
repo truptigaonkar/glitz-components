@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import { styled } from '@glitz/react';
-import { huge, humongous, large, medium, small } from '../Shared/Style';
+import { huge, humongous, large, medium, small, thick, thin } from '../Shared/Style';
 import * as style from '../Shared/Style';
 import { black, monochromeLight, neutralDark, positiveLight, secondaryDark, tertiaryDark, white } from '../Shared/Style';
-import { H2, P, Hr } from '../Shared/Generic';
+import { H2, P, Hr, H1, H3, H4, H5, H6, Ul } from '../Shared/Generic';
 
 const BasicGlitz = () => {
     const [backgroundColor, setBackgroundColor] = useState(neutralDark);
@@ -12,8 +12,17 @@ const BasicGlitz = () => {
     }
     return (
         <div>
-            <H2>margin, padding, border, color</H2><Hr />
-            <P>This example creates two simple components, a wrapper a title, a button with some styles attached to it</P>
+            <Ul column>
+                <H1>Heading1</H1>
+                <H2>Heading2</H2>
+                <H3>Heading3</H3>
+                <H4>Heading4</H4>
+                <H5>Heading5</H5>
+                <H6>Heading6</H6>
+                <Divider />
+                <P>P tag: This example creates two simple components, a wrapper a title, a button with some styles attached to it</P>
+            </Ul>
+            <Hr />
             <Wrapper style={{ backgroundColor }}>
                 <Title>Hover <styled.Span css={{ color: tertiaryDark }}>me!</styled.Span></Title>
                 <Button onClick={onClickButton}>Change background color</Button>
@@ -23,6 +32,13 @@ const BasicGlitz = () => {
 }
 
 export default BasicGlitz
+
+const Divider = styled.div({
+    width: '100%',
+    height: thin,
+    backgroundColor: secondaryDark,
+    margin: { y: thick },
+  });
 
 const Wrapper = styled.section({
     padding: {xy: humongous},
