@@ -5,9 +5,9 @@ import { H2, P, Hr } from '../Shared/Generic';
 const Animation = () => {
     return (
         <styled.Div>
-            <H2>Animation</H2><Hr />
+            <H2>Animation</H2>
                 <P>The example will change both the background-color and the position of the element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete.It uses the value "infinite" to make the animation continue for ever.</P>
-                <Box>Box</Box>
+                <Box>Box</Box><Hr />
         </styled.Div>
     )
 }
