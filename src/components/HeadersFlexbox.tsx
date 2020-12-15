@@ -1,6 +1,7 @@
 import { media } from '@glitz/core'
 import { styled } from '@glitz/react'
 import React from 'react'
+import { negativeText, thick } from '../Shared/Style'
 
 const HeadersFlexbox = () => {
     return (
@@ -10,11 +11,11 @@ const HeadersFlexbox = () => {
                 <Nav>
                     <ToggleButton aria-expanded="false" type="button">menu</ToggleButton>
                     <NavWrapper>
-                        <Li><A href="#">Home</A></Li>
-                        <Li><A href="#">About</A></Li>
-                        <Li><A href="#">Services</A></Li>
-                        <Li><A href="#">Hire us</A></Li>
-                        <Li><A href="#">Contact</A></Li>
+                        <Li><LinkA href="#">Home</LinkA></Li>
+                        <Li><LinkA href="#">About</LinkA></Li>
+                        <Li><LinkA href="#">Services</LinkA></Li>
+                        <Li><LinkA href="#">Hire us</LinkA></Li>
+                        <Li><LinkA href="#">Contact</LinkA></Li>
                     </NavWrapper>
                 </Nav>
             </Wrapper>
@@ -45,7 +46,6 @@ const NavWrapper = styled.ul({
 })
 
 const Li = styled.li({
-    color: '#262626',
     padding: {
         top: '10px',
         right: '10px',
@@ -57,6 +57,16 @@ const Li = styled.li({
 const A = styled.a({
     textDecoration: 'none',
 })
+
+const LinkA = styled(A, {
+    ':hover': {
+        borderBottom: {
+            color: negativeText,
+            style: 'solid',
+            width: thick,
+        },
+    },
+});
 
 const ToggleButton = styled.button({
     display: 'block',
