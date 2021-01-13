@@ -7,10 +7,12 @@ import Boxmodel from './components/Boxmodel';
 import DeepStyleComposition from './components/DeepStyleComposition';
 import HeadersFlexbox from './components/HeadersFlexbox';
 import { Hr } from './Shared/Generic';
+import DynamicStylingUsingProps from './components/DynamicStylingUsingProps';
 
 function App() {
   return (
     <>
+      <DynamicStylingUsingProps success color="blue"/>
       <BasicGlitz />
       <Boxmodel />
       <DeepStyleComposition />
