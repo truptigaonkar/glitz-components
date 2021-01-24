@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, StyledProps } from '@glitz/react';
+import { styled } from '@glitz/react';
 
 type PropType = {
     success?: boolean;
