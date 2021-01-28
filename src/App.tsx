@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { styled } from '@glitz/react';
+import { Style } from '@glitz/type';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import BasicGlitz from './components/BasicGlitz';
 import Pseudoelement from './components/Pseudoelement';
@@ -10,12 +12,15 @@ import Animation from './components/Animation';
 import Home from './components/Home';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import StandaloneStyleObject from './components/StandaloneStyleObject';
 
 function App() {
   const [activeTab, setActiveTab] = useState('1');
   const toggle = (tab: any) => {
     if (activeTab !== tab) setActiveTab(tab);
   }
+  const containerStyle : Style = { display: 'flex' };
+
   return (
     <Router>
       {/* <ul>
@@ -38,8 +43,8 @@ function App() {
       <Route path="/dynamicStylingUsingProps" component={DynamicStylingUsingProps} success color="blue"/>
       <DynamicStylingUsingProps success color="blue"/> */}
 
-      <div>
-        <Nav tabs pills>
+      <styled.Div css={containerStyle}>
+        <Nav tabs vertical pills>
           <NavItem>
             <NavLink
               className={classnames({ active: activeTab === '1' })}
@@ -102,6 +107,14 @@ function App() {
               onClick={() => { toggle('8'); }}
             >
               <li><Link to="/dynamicStylingUsingProps">DynamicStylingUsingProps</Link></li>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '9' })}
+              onClick={() => { toggle('9'); }}
+            >
+              <li><Link to="/standaloneStyleObject">StandaloneStyleObject</Link></li>
             </NavLink>
           </NavItem>
         </Nav>
@@ -170,10 +183,19 @@ function App() {
               </Col>
             </Row>
           </TabPane>
+          <TabPane tabId="9">
+            <Row>
+              <Col sm="12">
+                <h4>Tab 9  Contents</h4>
+                <Route path="/standaloneStyleObject" component={StandaloneStyleObject} success color="blue" />
+              </Col>
+            </Row>
+          </TabPane>
         </TabContent>
-      </div>
+      </styled.Div>
     </Router>
   );
 }
 
 export default App;
+
