@@ -13,36 +13,25 @@ import Home from './components/Home';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import StandaloneStyleObject from './components/StandaloneStyleObject';
+import GlobalStyling from './components/GlobalStyling';
+import {
+  Navbar,
+  NavbarBrand,
+} from 'reactstrap';
 
 function App() {
   const [activeTab, setActiveTab] = useState('1');
   const toggle = (tab: any) => {
     if (activeTab !== tab) setActiveTab(tab);
   }
-  const containerStyle : Style = { display: 'flex' };
+  const containerStyle : Style = { display: 'flex', margin: { xy: '10em' },};
 
   return (
     <Router>
-      {/* <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/animation">Animation</Link></li>
-        <li><Link to="/header">HeadersFlexbox</Link></li>
-        <li><Link to="/basicGlitz">BasicGlitz</Link></li>
-        <li><Link to="/boxmodel">Boxmodel</Link></li>
-        <li><Link to="/deepStyleComposition">DeepStyleComposition</Link></li>
-        <li><Link to="/pseudoelement">Pseudoelement</Link></li>
-        <li><Link to="/dynamicStylingUsingProps">DynamicStylingUsingProps</Link></li>
-      </ul>
-      <Route exact path="/" component={Home}/>
-      <Route path="/animation" component={Animation} />
-      <Route path="/header" component={HeadersFlexbox} />
-      <Route path="/basicGlitz" component={BasicGlitz} />
-      <Route path="/boxmodel" component={Boxmodel} />
-      <Route path="/deepStyleComposition" component={DeepStyleComposition} />
-      <Route path="/pseudoelement" component={Pseudoelement} />
-      <Route path="/dynamicStylingUsingProps" component={DynamicStylingUsingProps} success color="blue"/>
-      <DynamicStylingUsingProps success color="blue"/> */}
-
+      <Navbar color="dark" dark expand="md" style={{display: 'flex', justifyContent: 'center'}}>
+        <NavbarBrand>reactstrap</NavbarBrand>
+        
+      </Navbar>
       <styled.Div css={containerStyle}>
         <Nav tabs vertical pills>
           <NavItem>
@@ -117,6 +106,14 @@ function App() {
               <li><Link to="/standaloneStyleObject">StandaloneStyleObject</Link></li>
             </NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '10' })}
+              onClick={() => { toggle('10'); }}
+            >
+              <li><Link to="/globalStyling">GlobalStyling</Link></li>
+            </NavLink>
+          </NavItem>
         </Nav>
         <TabContent activeTab={activeTab}>
           <TabPane tabId="1">
@@ -188,6 +185,14 @@ function App() {
               <Col sm="12">
                 <h4>Tab 9  Contents</h4>
                 <Route path="/standaloneStyleObject" component={StandaloneStyleObject} success color="blue" />
+              </Col>
+            </Row>
+          </TabPane>
+          <TabPane tabId="10">
+            <Row>
+              <Col sm="12">
+                <h4>Tab 10  Contents</h4>
+                <Route path="/globalStyling" component={GlobalStyling} success color="blue" />
               </Col>
             </Row>
           </TabPane>
