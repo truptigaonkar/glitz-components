@@ -122,6 +122,7 @@ function App() {
             <Row>
               <Col sm="12">
                 <h4>Glitz React Playground with TypeScript</h4>
+                <p>Reference: https://github.com/frenic/glitz#getting-started</p>
                 <Route exact path="/" component={Home} />
               </Col>
             </Row>
