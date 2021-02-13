@@ -7,7 +7,7 @@ const Pseudoelement = () => {
         <>
             <styled.H2 css={{ textAlign: 'center' }}>Pseudo Element</styled.H2>
             <styled.Div css={{ display: 'flex', justifyContent: 'space-around' }}>
-                <styled.Div>
+                <styled.Div css={{ marginRight: '50px' }}>
                     <H3>:before, ::after</H3><Hr />
                     <P>This example creates svenska flag</P>
                     <Svenskaflag></Svenskaflag>

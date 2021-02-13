@@ -24,13 +24,15 @@ function App() {
   const toggle = (tab: any) => {
     if (activeTab !== tab) setActiveTab(tab);
   }
-  const containerStyle : Style = { display: 'flex', margin: { xy: '10em' },};
+  const containerStyle : Style = { 
+    display: 'flex', 
+    margin: { xy: '10em' },
+  };
 
   return (
     <Router>
       <Navbar color="dark" dark expand="md" style={{display: 'flex', justifyContent: 'center'}}>
-        <NavbarBrand>reactstrap</NavbarBrand>
-        
+        <NavbarBrand>Glitz React Playground with TypeScript</NavbarBrand>
       </Navbar>
       <styled.Div css={containerStyle}>
         <Nav tabs vertical pills>
@@ -119,7 +121,7 @@ function App() {
           <TabPane tabId="1">
             <Row>
               <Col sm="12">
-                <h4>Tab 1 Contents</h4>
+                <h4>Glitz React Playground with TypeScript</h4>
                 <Route exact path="/" component={Home} />
               </Col>
             </Row>
@@ -127,7 +129,6 @@ function App() {
           <TabPane tabId="2">
             <Row>
               <Col sm="12">
-                <h4>Tab 2  Contents</h4>
                 <Route path="/animation" component={Animation} />
               </Col>
             </Row>
@@ -135,7 +136,6 @@ function App() {
           <TabPane tabId="3">
             <Row>
               <Col sm="12">
-                <h4>Tab 3  Contents</h4>
                 <Route path="/header" component={HeadersFlexbox} />
               </Col>
             </Row>
@@ -143,7 +143,6 @@ function App() {
           <TabPane tabId="4">
             <Row>
               <Col sm="12">
-                <h4>Tab 4  Contents</h4>
                 <Route path="/basicGlitz" component={BasicGlitz} />
               </Col>
             </Row>
@@ -151,7 +150,6 @@ function App() {
           <TabPane tabId="5">
             <Row>
               <Col sm="12">
-                <h4>Tab 5  Contents</h4>
                 <Route path="/boxmodel" component={Boxmodel} />
               </Col>
             </Row>
@@ -159,7 +157,6 @@ function App() {
           <TabPane tabId="6">
             <Row>
               <Col sm="12">
-                <h4>Tab 6  Contents</h4>
                 <Route path="/deepStyleComposition" component={DeepStyleComposition} />
               </Col>
             </Row>
@@ -167,7 +164,6 @@ function App() {
           <TabPane tabId="7">
             <Row>
               <Col sm="12">
-                <h4>Tab 7  Contents</h4>
                 <Route path="/pseudoelement" component={Pseudoelement} />
               </Col>
             </Row>
@@ -175,7 +171,6 @@ function App() {
           <TabPane tabId="8">
             <Row>
               <Col sm="12">
-                <h4>Tab 8  Contents</h4>
                 <Route path="/dynamicStylingUsingProps" component={DynamicStylingUsingProps} success color="blue" />
               </Col>
             </Row>
@@ -183,7 +178,6 @@ function App() {
           <TabPane tabId="9">
             <Row>
               <Col sm="12">
-                <h4>Tab 9  Contents</h4>
                 <Route path="/standaloneStyleObject" component={StandaloneStyleObject} success color="blue" />
               </Col>
             </Row>
@@ -191,7 +185,6 @@ function App() {
           <TabPane tabId="10">
             <Row>
               <Col sm="12">
-                <h4>Tab 10  Contents</h4>
                 <Route path="/globalStyling" component={GlobalStyling} success color="blue" />
               </Col>
             </Row>
