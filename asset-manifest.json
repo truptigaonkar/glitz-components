@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/glitz-components/static/css/main.3482cccf.chunk.css",
+    "main.js": "/glitz-components/static/js/main.2fe14c43.chunk.js",
+    "main.js.map": "/glitz-components/static/js/main.2fe14c43.chunk.js.map",
+    "runtime-main.js": "/glitz-components/static/js/runtime-main.b4f65c13.js",
+    "runtime-main.js.map": "/glitz-components/static/js/runtime-main.b4f65c13.js.map",
+    "static/css/2.31ff0196.chunk.css": "/glitz-components/static/css/2.31ff0196.chunk.css",
+    "static/js/2.668d7455.chunk.js": "/glitz-components/static/js/2.668d7455.chunk.js",
+    "static/js/2.668d7455.chunk.js.map": "/glitz-components/static/js/2.668d7455.chunk.js.map",
+    "index.html": "/glitz-components/index.html",
+    "static/css/2.31ff0196.chunk.css.map": "/glitz-components/static/css/2.31ff0196.chunk.css.map",
+    "static/css/main.3482cccf.chunk.css.map": "/glitz-components/static/css/main.3482cccf.chunk.css.map",
+    "static/js/2.668d7455.chunk.js.LICENSE.txt": "/glitz-components/static/js/2.668d7455.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/glitz-components/static/media/background.afcd79e5.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4f65c13.js",
+    "static/css/2.31ff0196.chunk.css",
+    "static/js/2.668d7455.chunk.js",
+    "static/css/main.3482cccf.chunk.css",
+    "static/js/main.2fe14c43.chunk.js"
+  ]
+}
