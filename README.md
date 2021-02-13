@@ -1,5 +1,5 @@
 # Glitz React Playground with TypeScript
-Refernce: https://github.com/frenic/glitz#getting-started
+Reference: https://github.com/frenic/glitz#getting-started
 
 ## Getting started
 
